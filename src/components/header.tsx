@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
                             <a
                                 href={item.link}
                                 className={`relative text-lg group transition-colors duration-200 ${currentPath === item.link
-                                    ? "text-[#ffc778] text-xl " // Active state color
+                                    ? "text-[#D1B896] text-xl " // Active state color
                                     : isScrolled
                                         ? "text-white" // Scrolled state color
                                         : "text-gray-800 " // Default and hover color
@@ -73,10 +73,10 @@ const Header: React.FC<HeaderProps> = ({
             </nav>
 
             {/* Mobile Hamburger Menu */}
-            <div className={`lg:hidden`}>
+            <div className="lg:hidden">
                 <Drawer>
                     <DrawerTrigger>
-                        <Menu className={`h-8 w-8 ${isScrolled ? 'text-gray-200 ' : 'text-gray-600'}`} />
+                        <Menu className={`h-8 w-8 ${isScrolled ? 'text-gray-200' : 'text-gray-600'}`} />
                         {/* Change icon color based on scroll state / Hamburger icon */}
                     </DrawerTrigger>
                     <DrawerContent className="bg-white/10 backdrop-blur-lg border-white/20 text-gray-200 rounded-t-2xl">
@@ -86,8 +86,9 @@ const Header: React.FC<HeaderProps> = ({
                                     <li key={index}>
                                         <a
                                             href={item.link}
-                                            className={`relative text-lg  group transition-colors duration-200 ${currentPath === item.link ? "text-[#D1B896] text-xl" // Active state color
-                                                : "text-gray-100 hover:text-[#9f9f9f]" // Default and hover color
+                                            className={`relative text-lg group transition-colors duration-200 ${currentPath === item.link
+                                                    ? "text-[#D1B896] text-xl" // Active state color
+                                                    : "text-gray-100 hover:text-[#9f9f9f]" // Default and hover color
                                                 }`}
                                         >
                                             {item.label}
@@ -97,17 +98,18 @@ const Header: React.FC<HeaderProps> = ({
                                 ))}
                             </ul>
                         </div>
-                        <DrawerClose className="absolute top-4 right-4 p-2 rounded-lg hover:bg-white/20 transition-all duration-300">
-                            <span className="text-gray-800">Close</span>
+                        <DrawerClose className="absolute top-4 right-4 p-2 rounded-lg hover:bg-white/20 transition-all duration-300 text-gray-400 hover:text-gray-200">
+                            <span>Close</span>
                         </DrawerClose>
                     </DrawerContent>
                 </Drawer>
             </div>
 
+
             {/* Call-to-Action Button */}
             <button
                 onClick={() => window.location.href = '/order-now'}
-                className="hidden lg:block px-5 py-3 text-white rounded-2xl bg-[#1a6169] hover:bg-[#1d4448] transition-all duration-300 font-semibold shadow-[0_0_25px_rgba(26,97,105,0.3)]"
+                className="hidden lg:block px-5 py-3 text-white rounded-2xl bg-[#1a6169] hover:bg-[#3E868E] cursor-pointer transition-all duration-300 font-semibold shadow-[0_0_25px_rgba(26,97,105,0.3)]"
             >
                 Order Now
             </button>

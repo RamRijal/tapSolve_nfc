@@ -14,7 +14,7 @@ const Features = () => {
                         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
                             <img
                                 loading="lazy"
-                                src="/card5.jpg" // Replace with your image URL
+                                src="/bg.jpg" // Replace with your image URL
                                 alt="NFC Business Card"
                                 className="w-full h-full object-cover rounded-lg shadow-lg"
                             />

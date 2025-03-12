@@ -7,6 +7,7 @@ import Homepage from './pages/Homepage';
 import Products from './pages/Products';
 import ProductDetailPage from './pages/Products/[id]';
 import Support from './pages/Support';
+import UnderConstruction from './components/UnderConstruction';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <TopLoadingBar />
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="*" element={<UnderConstruction />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/contact" element={<Contact />} />

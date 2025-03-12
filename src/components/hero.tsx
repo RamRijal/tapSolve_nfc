@@ -35,9 +35,9 @@ const featuredSolutions = [
 const HeroPage: React.FC<HeroPageProps> = ({
     title = "For your personal brand identity",
     subtitle = "Transform your business with our innovative solutions",
-    ctaText = "Get Started",
-    ctaUrl = "/get-started",
-    image = "/card4.jpg"
+    ctaText = "Explore our products",
+    ctaUrl = "/products",
+    image = "/card5.jpg"
 }) => {
     return (
         <div className="min-h-screen w-full z-40 bg-gradient-to-br from-[#3E868E] to-[#e9cb85] relative overflow-hidden">
@@ -86,9 +86,9 @@ const HeroPage: React.FC<HeroPageProps> = ({
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.5 }} // Animate when 50% of the card is in view
+                            viewport={{ once: true, amount: 0.6 }} // Animate when 50% of the card is in view
                             className="relative z-10 mt-16 w-full max-w-md">
-                            <Card className="bg-white/10 backdrop-blur-lg border-white/20 rounded-xl overflow-hidden shadow-2xl">
+                            <Card className="bg-white/10 backdrop-blur-lg transition-all duration-200 border-white/20 rounded-xl overflow-hidden shadow-2xl">
                                 <div className="p-8">
                                     <h3 className="text-2xl font-semibold text-white mb-4">
                                         {solution.title}

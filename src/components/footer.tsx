@@ -22,13 +22,13 @@ const Footer: React.FC<FooterProps> = ({
     links = [
         { text: 'Home', href: '/' },
         { text: 'Products', href: '/products' },
-        { text: 'FAQs', href: '/faqs' },
+        { text: 'FAQs', href: '#faqs' },
         { text: 'Support', href: '/support' },
         { text: 'Contact', href: '/contact' }
     ]
 }) => {
     return (
-        <footer className="bg-[#3E868E] text-white text-left">
+        <footer className="bg-[#1A6169] text-white text-left">
             <div className="max-w-7xl mx-auto px-4 py-12">
                 {/* Footer Content Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">

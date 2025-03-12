@@ -67,9 +67,16 @@ const ProductDetailPage = () => {
 
     if (!product) {
         return (
-            <div className="text-center text-gray-500">
-                <h1 className="text-4xl font-bold">Product Not Found</h1>
-                <p className="text-lg">The product you are looking for does not exist.</p>
+            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-12 px-4">
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold text-gray-800 mb-4">Product Not Found</h1>
+                    <p className="text-lg text-gray-600 mb-8">
+                        The product you are looking for does not exist. Please check the URL or try searching for another product.
+                    </p>
+                    <a href="/products" className="mt-6 inline-block px-6 py-3 bg-[#1a6169] text-white font-medium rounded-md hover:bg-[#2e7780] transition-colors">
+                        Go Back to Products
+                    </a>
+                </div>
             </div>
         );
     }
