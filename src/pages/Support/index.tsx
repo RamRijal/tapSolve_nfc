@@ -1,13 +1,11 @@
 import React from 'react';
-import { Card } from '../../components/ui/card';
+import UnderConstruction from '../../components/UnderConstruction';
 
 const Support: React.FC = () => {
     return (
-        <div className='h-full'>
-            <h2>Welcome to the Support</h2>
-            <Card title="Sample Card"
-            />
-        </div>
+        <>
+            <UnderConstruction />
+        </>
     );
 };
 

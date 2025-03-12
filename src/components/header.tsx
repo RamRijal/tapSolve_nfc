@@ -42,11 +42,12 @@ const Header: React.FC<HeaderProps> = ({
         <header className={`sticky top-0 z-10 flex justify-between items-center md:px-6 px-4 py-3  ${isScrolled ? 'backdrop-blur-2xl bg-black/50' : ''}`}>
             {/* Logo Section */}
             <div className="shrink-0 items-center flex">
-                <img
+               <a href="/"> <img
                     src={isScrolled ? '/WhiteFullLogo.png' : logoSrc} // Change logo based on scroll state
                     alt={logoAlt}
                     className="max-h-[45px] md:max-h-[60px] w-auto object-contain"
                 />
+                </a>
             </div>
 
             {/* Desktop Navigation */}

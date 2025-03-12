@@ -37,7 +37,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
     subtitle = "Transform your business with our innovative solutions",
     ctaText = "Get Started",
     ctaUrl = "/get-started",
-    image = "/bg.jpg"
+    image = "/card4.jpg"
 }) => {
     return (
         <div className="min-h-screen w-full z-40 bg-gradient-to-br from-[#3E868E] to-[#e9cb85] relative overflow-hidden">
@@ -88,7 +88,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }} // Animate when 50% of the card is in view
                             className="relative z-10 mt-16 w-full max-w-md">
-                            <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl overflow-hidden shadow-2xl">
+                            <Card className="bg-white/10 backdrop-blur-lg border-white/20 rounded-xl overflow-hidden shadow-2xl">
                                 <div className="p-8">
                                     <h3 className="text-2xl font-semibold text-white mb-4">
                                         {solution.title}
