@@ -57,11 +57,13 @@ const Header: React.FC<HeaderProps> = ({
                         <li key={index}>
                             <a
                                 href={item.link}
-                                className={`relative text-lg group transition-colors duration-200 ${currentPath === item.link
-                                    ? "text-[#D1B896] text-xl " // Active state color
+                                className={`relative group transition-colors text-xl duration-200 ${currentPath === item.link
+                                    ? isScrolled
+                                        ? "text-[#fcd7a3]" // Scrolled state color
+                                        : "text-[#D1B896] " // Default and hover color
                                     : isScrolled
                                         ? "text-white" // Scrolled state color
-                                        : "text-gray-800 " // Default and hover color
+                                        : "text-gray-700 " // Default and hover color
                                     }`}
                             >
                                 {item.label}
@@ -109,7 +111,9 @@ const Header: React.FC<HeaderProps> = ({
             {/* Call-to-Action Button */}
             <button
                 onClick={() => window.location.href = '/order-now'}
-                className="hidden lg:block px-5 py-3 text-white rounded-2xl bg-[#1a6169] hover:bg-[#3E868E] cursor-pointer transition-all duration-300 font-semibold shadow-[0_0_25px_rgba(26,97,105,0.3)]"
+                className={`hidden lg:block px-5 py-3 rounded-2xl cursor-pointer transition-all duration-300 font-semibold 
+                    ${isScrolled ? 'bg-gray-200 text-[#1a6169] hover:bg-gray-50 hover:text-[#497f85] ' : ' text-white bg-[#1a6169] hover:bg-[#3E868E] shadow-[0_0_25px_rgba(26,97,105,0.3)]'}
+                    `}
             >
                 Order Now
             </button>

@@ -19,7 +19,7 @@ const Features = () => {
                                 className="w-full h-full object-cover rounded-lg shadow-lg"
                             />
                             {/* Overlay */}
-                            <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-black/20 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg items-center justify-center gap-4 cursor-pointer">
+                            <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-black/20 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg items-center justify-center gap-4 cursor-pointer">
                                 <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold p-4 sm:p-8 text-center">
                                     Want to get started with us?
                                 </p>
