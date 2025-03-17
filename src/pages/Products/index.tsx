@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { products } from '../../constants/data';
+import { cardVariants, products } from '../../constants/data';
+import { motion } from 'framer-motion';
+import { TextFade } from '../../components/ui/TextFadeUp';
 
 const ProductsPage = () => {
     return (
@@ -7,12 +9,23 @@ const ProductsPage = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Heading Section */}
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 mt-4">
-                        Our Products
-                    </h2>
-                    <p className="max-w-xl mx-auto mt-2 mb-8 text-sm sm:text-base leading-relaxed text-gray-500">
-                        Explore our collection of innovative NFC-enabled digital business cards, designed to elevate your professional networking experience.
-                    </p>
+                    <TextFade direction='up'>
+                        <motion.h2
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 mt-4">
+                            Our Products
+                        </motion.h2>
+                    </TextFade>
+                    <TextFade direction='up'>
+                        <motion.p
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible" className="max-w-xl mx-auto mt-2 mb-8 text-sm sm:text-base leading-relaxed text-gray-500">
+                            Explore our collection of innovative NFC-enabled digital business cards, designed to elevate your professional networking experience.
+                        </motion.p>
+                    </TextFade>
                 </div>
 
                 {/* Grid layout for products */}
