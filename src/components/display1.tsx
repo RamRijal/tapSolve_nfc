@@ -11,12 +11,12 @@ const Features = () => {
                 <div className="flex flex-col items-center lg:flex-row gap-8 relative">
                     {/* Image on the left */}
                     <div className="w-full lg:w-1/2 flex justify-center relative group">
-                        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+                        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[700px]">
                             <img
                                 loading="lazy"
-                                src="/bg.jpg" // Replace with your image URL
+                                src="/Mockup3.png" // Replace with your image URL
                                 alt="NFC Business Card"
-                                className="w-full h-full object-cover rounded-lg shadow-lg"
+                                className="w-full h-full object-cover  rounded-lg"
                             />
                             {/* Overlay */}
                             <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-black/20 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg items-center justify-center gap-4 cursor-pointer">

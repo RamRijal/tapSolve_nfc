@@ -1,6 +1,8 @@
+import Banner from '../../components/banner'
 import Display1 from '../../components/display1'
 import HeroPage from '../../components/hero'
 import HowItWorks from '../../components/howitworks'
+import Testimonials from '../../components/testimonials'
 import FAQs from '../FAQs'
 
 const Homepage = () => {
@@ -8,7 +10,9 @@ const Homepage = () => {
         <>
             <HeroPage />
             <Display1 />
-            <HowItWorks/>
+            <HowItWorks />
+            <Banner />
+            <Testimonials />
             <FAQs />
 
         </>

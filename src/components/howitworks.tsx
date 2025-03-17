@@ -26,7 +26,7 @@ const howItWorksData = [
 
 const HowItWorks = () => {
     return (
-        <div className="p-8 bg-white ">
+        <div className="p-8 md:py-16 bg-white ">
             <div className="max-w-7xl mx-auto">
                 <TextFade direction="up">
                     <motion.div
