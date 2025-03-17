@@ -23,7 +23,7 @@ interface ArrowProps {
 
 const NextArrow = ({ onClick }: ArrowProps) => (
     <button
-        className="absolute top-1/2 right-[-50px] transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-gray-400 transition-all"
+        className="absolute top-1/2 -right-4 xl:-right-[50px] transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 md:p-3 shadow-lg cursor-pointer hover:bg-gray-400 transition-all"
         onClick={onClick}
     >
         <ChevronRight size={24} />
@@ -32,7 +32,7 @@ const NextArrow = ({ onClick }: ArrowProps) => (
 
 const PrevArrow = ({ onClick }: ArrowProps) => (
     <button
-        className="absolute top-1/2 left-[-50px] transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-gray-400 transition-all"
+        className="absolute z-50 top-1/2 -left-4 xl:-left-[50px] transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 md:p-3 shadow-lg cursor-pointer hover:bg-gray-400 transition-all"
         onClick={onClick}
     >
         <ChevronLeft size={24} />
@@ -83,18 +83,18 @@ const Testimonials = () => {
                             initial="hidden"
                             whileInView="visible"
                             className="text-3xl mt-4 font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                            What our customers say
+                           What our customers say
                         </motion.div>
-                    </TextFade>
+                        </TextFade>
                     <TextFade direction="up">
                         <motion.div
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
                             className="max-w-lg mx-auto mt-4 text-lg text-gray-600" >
-                            Hear from our satisfied customers about their experiences with our products and services.
+                                Hear from our satisfied customers about their experiences with our products and services.
                         </motion.div>
-                    </TextFade>
+                        </TextFade>
                     <p >
                     </p>
                 </div>
@@ -102,8 +102,8 @@ const Testimonials = () => {
                 <div className="mt-12 relative">
                     <Slider {...settings}>
                         {testimonialsData.map((testimonial, index) => (
-                            <div key={index} className="px-4 mb-8">
-                                <div className="bg-white rounded-xl shadow-lg p-8 h-72 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                            <div key={index} className="px-4 mb-4 md:mb-8">
+                                <div className="bg-white rounded-xl shadow-lg p-8 h-full md:h-72 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                                     <div className="flex items-center text-left space-x-4">
                                         <img
                                             className="w-12 h-12 rounded-full object-cover"
