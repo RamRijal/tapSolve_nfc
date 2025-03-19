@@ -8,7 +8,7 @@ import {
 } from '../../components/ui/accordion'; // Adjust the import path based on your project structure
 import { motion } from 'framer-motion'; // Import Framer Motion
 import './index.css';
-import { cardVariants } from '../../constants/data';
+import { cardVariants } from '../../data/data';
 // Dummy FAQ data
 const faqData = [
     {
@@ -47,9 +47,9 @@ const FAQs: React.FC = () => {
             <motion.div
                 variants={cardVariants}
                 initial="hidden"
-                whileInView="visible" 
+                whileInView="visible"
                 className="max-w-2xl mx-auto text-center">
-                <h2 className="text-3xl mt-4 font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Frequently asked questions</h2>
+                <h2 className="text-5xl mt-4 font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Frequently asked<span className="text-[#D1B896]"> questions </span></h2>
                 <p className="max-w-xl mx-auto mt-2 mb-8 text-base leading-relaxed text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
             </motion.div>
             <Card className="max-w-3xl mx-auto px-6 bg-white shadow-lg rounded-lg">

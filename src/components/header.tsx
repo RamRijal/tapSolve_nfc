@@ -12,6 +12,7 @@ const navItems = [
     { label: "Products", link: "/products" },
     { label: "Support", link: "/support" },
     { label: "Contact", link: "/contact" },
+    { label: "Your Orders", link: "/order-now" },
 ];
 
 const Header: React.FC<HeaderProps> = ({
