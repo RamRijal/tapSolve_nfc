@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from './ui/card';
 import { TextFade } from './ui/TextFadeUp';
 import { motion } from 'framer-motion'; // Import Framer Motion
-import { cardVariants } from '../constants/data';
+import { cardVariants } from '../data/data';
 
 
 interface HeroPageProps {

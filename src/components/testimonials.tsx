@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import { testimonialsData } from '../data/dummy';
 import { TextFade } from './ui/TextFadeUp';
 import { motion } from 'framer-motion';
-import { cardVariants } from '../constants/data';
+import { cardVariants } from '../data/data';
 
 // Define the type for testimonial data
 export interface Testimonial {
@@ -82,19 +82,19 @@ const Testimonials = () => {
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
-                            className="text-3xl mt-4 font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                           What our customers say
+                            className="text-5xl mt-4 font-bold  leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                            What our <span className="text-[#D1B896]">customers</span> say
                         </motion.div>
-                        </TextFade>
+                    </TextFade>
                     <TextFade direction="up">
                         <motion.div
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
                             className="max-w-lg mx-auto mt-4 text-lg text-gray-600" >
-                                Hear from our satisfied customers about their experiences with our products and services.
+                            Hear from our satisfied customers about their experiences with our products and services.
                         </motion.div>
-                        </TextFade>
+                    </TextFade>
                     <p >
                     </p>
                 </div>

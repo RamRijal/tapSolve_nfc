@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { TextFade } from "./ui/TextFadeUp";
 import { motion } from "framer-motion";
-import { cardVariants, nfcBusinessCardFeatures } from "../constants/data";
+import { cardVariants, nfcBusinessCardFeatures } from "../data/data";
 
 const Features = () => {
     return (
-        <div className="p-8 py-12 md:py-24 bg-gray-50">
+        <div className="p-8 py-12 md:py-24 bg-gray-100">
             <div className="max-w-7xl mx-auto">
                 {/* Flex container for image and content */}
                 <div className="flex flex-col items-center lg:flex-row gap-8 relative">
@@ -16,7 +16,7 @@ const Features = () => {
                                 loading="lazy"
                                 src="/Mockup3.png" // Replace with your image URL
                                 alt="NFC Business Card"
-                                className="w-full h-full object-cover  rounded-lg"
+                                className="w-full h-full object-contain lg:object-cover  rounded-lg"
                             />
                             {/* Overlay */}
                             <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-black/20 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg items-center justify-center gap-4 cursor-pointer">

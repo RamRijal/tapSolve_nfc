@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { cardVariants, products } from '../../constants/data';
+import { cardVariants, products } from '../../data/data';
 import { motion } from 'framer-motion';
 import { TextFade } from '../../components/ui/TextFadeUp';
 
@@ -48,11 +48,15 @@ const ProductsPage = () => {
                                     <p className="text-xs mb-2 bg-gray-400 w-fit p-1 px-2.5 rounded-2xl text-white">
                                         {product.category}
                                     </p>
-                                    <h2 className="text-lg sm:text-xl font-bold text-gray-700 mb-2">
+                                    <div className="flex justify-between items-center"><h2 className="text-lg sm:text-xl font-bold text-gray-700 mb-2">
                                         {product.name}
                                     </h2>
-                                    <p className="text-base sm:text-lg text-gray-600 mb-2">
-                                        {product.price}
+                                        <p className="text-base sm:text-2xl font-bold text-green-700 mb-2">
+                                            {product.price}
+                                        </p>
+                                    </div>
+                                    <p className="text-sm text-gray-500">
+                                        {product.description.slice(0, 70)}...
                                     </p>
                                 </div>
                             </div>

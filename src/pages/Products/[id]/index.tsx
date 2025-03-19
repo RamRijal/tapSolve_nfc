@@ -3,7 +3,7 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import Modal from 'react-modal';
 import { Link, useParams } from 'react-router-dom';
-import { products } from '../../../constants/data';
+import { products } from '../../../data/data';
 import { X } from 'lucide-react';
 
 // Modal styles
