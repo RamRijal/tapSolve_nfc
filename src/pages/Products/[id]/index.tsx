@@ -4,7 +4,8 @@ import 'react-medium-image-zoom/dist/styles.css';
 import Modal from 'react-modal';
 import { Link, useParams } from 'react-router-dom';
 import { products } from '../../../data/data';
-import { X } from 'lucide-react';
+import { MinusIcon, Plus, X } from 'lucide-react';
+import { useOrder } from '../../../context/orderContext';
 
 // Modal styles
 const customStyles = {
@@ -27,20 +28,37 @@ const customStyles = {
         zIndex: 999, // Ensure overlay is above navbar
     },
 };
-
 // Set the app element for react-modal
 Modal.setAppElement('#root');
 
 const ProductDetailPage = () => {
     const { id } = useParams();
+    const {addToOrder} =useOrder();
 
-    // Find the product by ID
-    const product = products.find((p) => p.id === id);
+    const product = products.find((p) => p.id === Number(id));
 
-    // State for modal and selected image
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(product?.images[0] || '');
     const [mainImage, setMainImage] = useState(product?.images[0] || '');
+    const [quantity, setQuantity] = useState(1); // Local quantity state
+
+    // Handle increment
+    const handleIncrement = () => {
+        setQuantity(prev => prev + 1);
+    };
+
+    // Handle decrement
+    const handleDecrement = () => {
+        if (quantity > 1) setQuantity(prev => prev - 1);
+    };
+
+    // Handle quantity change from input
+    const handleQuantityChange = (value: number) => {
+        if (value >= 1) {
+            setQuantity(value);
+        }
+    };
+
 
     useEffect(() => {
         if (product) {
@@ -59,7 +77,7 @@ const ProductDetailPage = () => {
     const closeModal = () => {
         setIsModalOpen(false);
     };
-
+   
     // Get similar products (same category)
     const similarProducts = products.filter(
         (p) => p.category === product?.category && p.id !== product.id
@@ -146,7 +164,7 @@ const ProductDetailPage = () => {
                                     {product.name}
                                 </h1>
                                 <p className="text-2xl sm:text-3xl text-[#1a6169] mt-2 sm:mt-0">
-                                    {product.price}
+                                    ${product.price}
                                 </p>
                             </div>
                             <p className="text-gray-700 my-4 sm:my-6 text-sm sm:text-base">
@@ -154,11 +172,32 @@ const ProductDetailPage = () => {
                             </p>
                             <div className="flex items-center">
                                 <p className="text-base font-semibold text-gray-600">Category:&nbsp;</p>
-                                <p className="text-white bg-gray-300 w-fit p-1 px-4 rounded-2xl text-sm">
+                                <p className="text-gray-800  text-lg">
                                     {product.category}
                                 </p>
                             </div>
-                            <button className="px-6 py-3 bg-[#1a6169] text-white rounded-lg hover:bg-[#1d4448] transition-all duration-300">
+                            <div className="flex items-center gap-3">
+                                <p className="text-base font-semibold text-gray-600">Quantity:&nbsp;</p>
+                                <button
+                                    onClick={() => handleDecrement()}
+                                    className="bg-gray-300 text-gray-700 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                                >
+                                    <MinusIcon size={20} />
+                                </button>
+                                <input
+                                    type="number"
+                                    value={quantity}
+                                    onChange={(e) => handleQuantityChange(parseInt(e.target.value, 10))}
+                                    className="bg-gray-200  p-2 border-0 w-24 text-center text-lg font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                                />
+                                <button
+                                    onClick={() => handleIncrement()}
+                                    className="bg-gray-300 text-gray-700 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                                >
+                                    <Plus size={20} />
+                                </button>
+                            </div>
+                            <button onClick={()=>addToOrder({...product,quantity})} className="px-6 py-3 bg-[#1a6169] text-white rounded-lg hover:bg-[#1d4448] transition-all duration-300 cursor-pointer">
                                 Order
                             </button>
                         </div>

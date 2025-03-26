@@ -40,7 +40,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
     image = "/card5.jpg"
 }) => {
     return (
-        <div className="min-h-screen w-full z-40 bg-gradient-to-br from-[#3E868E] to-[#e9cb85] relative overflow-hidden">
+        <div className="h-full md:min-h-screen w-full z-40 bg-gradient-to-br from-[#3E868E] to-[#e9cb85] relative overflow-hidden">
             {/* Hero Overlay */}
             <div className="absolute inset-0 z-10 bg-black/50" />
 
@@ -56,7 +56,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
             {/* Hero Content */}
             <div className=" relative container mx-auto px-4 py-12 flex flex-col items-center justify-center min-h-screen text-center">
                 {/* Hero Text */}
-                <div className="relative z-10 max-w-3xl space-y-6">
+                <div className="relative -mt-16 md:mt-0 z-10 max-w-3xl space-y-6">
                     <TextFade direction='up'>
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                             {title} just

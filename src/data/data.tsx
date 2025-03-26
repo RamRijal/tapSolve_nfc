@@ -1,94 +1,102 @@
 export const products = [
     {
-        id: '1',
+        id: 1,
         image: "/card1.jpg", // Replace with your NFC card image URL
         name: "Executive NFC Card",
         description: "A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.",
-        price: "$29.99",
+        price: 29.99,
         category: "PVC",
         images: [
             '/card2.jpg', // Thumbnail 1
             '/card3.jpg', // Thumbnail 2
             '/card1.jpg', // Main image
-            
-        ],
+
+        ]
+        , quantity: 1
     },
     {
-        id: '2',
+        id: 2,
         image: "/card2.jpg", // Replace with your NFC card image URL
         name: "Designer NFC Card",
         description: "A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.",
-        price: "$34.99",
+        price: 34.99,
         category: "Metal",
         images: [
             '/card2.jpg', // Thumbnail 1
             '/card1.jpg', // Main image
             '/card3.jpg', // Thumbnail 2
-            
-        ],
+
+        ]
+        ,
+        quantity: 1
+
     },
     {
-        id: '3',
+        id: 3,
         image: "/card3.jpg", // Replace with your NFC card image URL
         name: "Minimalist NFC Card",
         description: "A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.",
-        price: "$24.99",
+        price: 24.99,
         category: "Wooden",
         images: [
             '/card1.jpg', // Main image
             '/card3.jpg', // Thumbnail 2
             '/card2.jpg', // Thumbnail 1
-            
+
         ],
+        quantity: 1
     },
     {
-        id: '4',
+        id: 4,
         image: "/card4.jpg", // Replace with your NFC card image URL
         name: "Eco-Friendly NFC Card",
         description: "A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.",
-        price: "$27.99",
+        price: 27.99,
         category: "PVC",
         images: [
             '/card3.jpg', // Thumbnail 2
             '/card1.jpg', // Main image
             '/card2.jpg', // Thumbnail 1
-            
+
         ],
+        quantity: 1
     },
     {
-        id: '5',
+        id: 5,
         image: "/card5.jpg", // Replace with your NFC card image URL
         name: "Metallic NFC Card",
         description: "A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.",
-        price: "$39.99",
+        price: 39.99,
         category: "Wooden",
         images: [
             '/card2.jpg', // Thumbnail 1
             '/card1.jpg', // Main image
             '/card3.jpg', // Thumbnail 2
-            
+
         ],
+        quantity: 1
     },
     {
-        id: '6',
+        id: 6,
         image: "/bg.jpg", // Replace with your NFC card image URL
         name: "Transparent NFC Card",
         description: "A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.A high-end NFC card with advanced features.",
-        price: "$32.99",
+        price: 32.99,
         category: "Metal",
         images: [
             '/card1.jpg', // Main image
             '/card2.jpg', // Thumbnail 1
             '/card3.jpg', // Thumbnail 2
-            
+
         ],
+        quantity: 1
     },
 ];
 
 
 export const nfcBusinessCardFeatures = [
     {
-        title: "NFC-Enabled Digital Business Card",
+        title: "Our features",
         subtitle: "Revolutionize your networking with our cutting-edge",
         description: "NFC-Enabled Digital Business Card. Leveraging Near Field Communication (NFC) technology with vCard, our digital business cards provide seamless connectivity and unmatched convenience, tailored for modern professionals.",
         list: [
