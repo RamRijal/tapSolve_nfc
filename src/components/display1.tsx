@@ -35,18 +35,11 @@ const Features = () => {
                     {/* Content on the right */}
                     <div className="w-full lg:w-1/2 text-left">
                         <TextFade direction="up">
-                            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1a6169] mb-4">
+                            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#1a6169] mb-8">
                                 {nfcBusinessCardFeatures[0].title}
                             </h1>
                         </TextFade>
-                        <motion.p
-                            variants={cardVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            className="text-sm sm:text-base text-gray-700 mb-6"
-                        >
-                            {nfcBusinessCardFeatures[0].subtitle} {nfcBusinessCardFeatures[0].description}
-                        </motion.p>
+                       
 
                         {/* Mapped list data */}
                         <div className="space-y-4">

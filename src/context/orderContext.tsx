@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 interface OrderItem {
     id: number;
@@ -20,9 +20,19 @@ export const OrderContext = createContext<OrderContextType | undefined>(undefine
 
 export const OrderProvider = ({ children }: { children: ReactNode }) => {
 
-    const [orders, setOrders] = useState<OrderItem[]>([])
+    const [orders, setOrders] = useState<OrderItem[]>(() => {
+        const savedOrders = localStorage.getItem("orders");
+        return savedOrders ? JSON.parse(savedOrders) : [];
+    });
+    
+    useEffect(() => {
+        localStorage.setItem("orders", JSON.stringify(orders));
+    }, [orders]);
+
+
     // ADD ORDERS
     const addToOrder = (item: OrderItem) => {
+        console.log("Adding item to order:", item); // Debugging
         setOrders((prev) => {
             const existingOrder = prev.find((order) => order.id === item.id);
             if (existingOrder) {

@@ -35,7 +35,7 @@ const HowItWorks = () => {
                         whileInView="visible"
                         className="text-5xl mt-4 font-bold  leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
                         How it <span className="text-[#D1B896]">works</span>
-                        <p className="text-lg font-medium my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non harum </p>
+                        <p className="text-sm md:text-base text-gray-500 font-medium mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non harum </p>
                     </motion.p>
                 </TextFade>
                 {/* Grid layout for steps */}

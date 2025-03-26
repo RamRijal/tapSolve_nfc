@@ -32,7 +32,7 @@ const NextArrow = ({ onClick }: ArrowProps) => (
 
 const PrevArrow = ({ onClick }: ArrowProps) => (
     <button
-        className="absolute z-50 top-1/2 -left-4 xl:-left-[50px] transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 md:p-3 shadow-lg cursor-pointer hover:bg-gray-400 transition-all"
+        className="absolute z-40 top-1/2 -left-4 xl:-left-[50px] transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 md:p-3 shadow-lg cursor-pointer hover:bg-gray-400 transition-all"
         onClick={onClick}
     >
         <ChevronLeft size={24} />
@@ -91,7 +91,7 @@ const Testimonials = () => {
                             variants={cardVariants}
                             initial="hidden"
                             whileInView="visible"
-                            className="max-w-lg mx-auto mt-4 text-lg text-gray-600" >
+                            className="text-sm md:text-base text-center text-gray-500 font-medium mt-3" >
                             Hear from our satisfied customers about their experiences with our products and services.
                         </motion.div>
                     </TextFade>

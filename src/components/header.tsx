@@ -12,7 +12,6 @@ const navItems = [
     { label: "Products", link: "/products" },
     { label: "Support", link: "/support" },
     { label: "Contact", link: "/contact" },
-    { label: "Your Orders", link: "/order-now" },
 ];
 
 const Header: React.FC<HeaderProps> = ({
@@ -43,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({
         <header className={`sticky top-0 z-10 flex justify-between items-center md:px-6 px-4 py-3  ${isScrolled ? 'backdrop-blur-2xl bg-black/50' : ''}`}>
             {/* Logo Section */}
             <div className="shrink-0 items-center flex">
-               <a href="/"> <img
+                <a href="/"> <img
                     src={isScrolled ? '/WhiteFullLogo.png' : logoSrc} // Change logo based on scroll state
                     alt={logoAlt}
                     className="max-h-[45px] md:max-h-[60px] w-auto object-contain"
@@ -90,8 +89,8 @@ const Header: React.FC<HeaderProps> = ({
                                         <a
                                             href={item.link}
                                             className={`relative text-lg group transition-colors duration-200 ${currentPath === item.link
-                                                    ? "text-[#D1B896] text-xl" // Active state color
-                                                    : "text-gray-100 hover:text-[#9f9f9f]" // Default and hover color
+                                                ? "text-[#D1B896] text-xl" // Active state color
+                                                : "text-gray-100 hover:text-[#9f9f9f]" // Default and hover color
                                                 }`}
                                         >
                                             {item.label}
@@ -99,6 +98,14 @@ const Header: React.FC<HeaderProps> = ({
                                         </a>
                                     </li>
                                 ))}
+                                <li>
+                                    <button
+                                        onClick={() => window.location.href = '/order-now'}
+                                        className={`block px-5 py-3 rounded-lg cursor-pointer transition-all duration-300 font-semibold bg-gray-200 text-[#1a6169] hover:bg-gray-50 hover:text-[#497f85]`}
+                                    >
+                                        Order Now
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                         <DrawerClose className="absolute top-4 right-4 p-2 rounded-lg hover:bg-white/20 transition-all duration-300 text-gray-400 hover:text-gray-200">

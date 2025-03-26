@@ -25,7 +25,7 @@ const HeroProducts = () => {
                                 <p className="text-5xl mt-4 font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
                                     Our <span className="text-[#D1B896]">Products</span>
                                 </p>
-                                <p className="text-lg text-center font-medium my-2">Discover our top picks just for you.</p>
+                                <p className="text-sm md:text-base text-center text-gray-500 font-medium mt-3">Discover our top picks just for you.</p>
                             </motion.div>
                         </TextFade>
                     </div>

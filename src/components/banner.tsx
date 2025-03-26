@@ -18,7 +18,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="relative hidden xl:flex">
-                        <img className="md:absolute -rotate-30 md:bottom-0 xl:right-0 md:scale-110 md:origin-bottom-right lg:scale-75 2xl:scale-100 2xl:-mt-0 h-[800px] bg-transparent" src="/Mockup3.png" alt="" />
+                        <img className="md:absolute -rotate-30 md:bottom-0 xl:right-0 md:scale-110 md:origin-bottom-right lg:scale-75 2xl:scale-80 2xl:-mt-0 h-[800px] bg-transparent" src="/Mockup3.png" alt="" />
                     </div>
                 </div>
             </div>
